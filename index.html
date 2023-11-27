@@ -3,13 +3,134 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Colering Letter</title>
+    <title>Coloring Letter</title>
 </head>
 
 <body>
-    알파벳을 입력해주세요(a-z, A-Z)
-    <input type="text">
-    <button>색 추출</button>
+    <div class="inputSection">
+        <span></span>
+        <span></span>
+        <span></span>
+        <form id="textForm">
+            <div class="title">
+                Coloring Letter
+            </div>
+            <div class="inputbox">
+                <input type="text" placeholder="a-z, A-Z의 알파벳만 넣으세요" id="keyword" name="keyword" required>
+            </div>
+            <div class="inputBtn">
+                <input type="submit" value="색 추출">
+            </div>
+            <div class=" text">
+                키워드에 맞는 적절한 5가지의 색을 추출해서 보여드립니다. 넣었던 키워드로 재 추출할 때 다른 색이 나올 수 있습니다. ChatGPT를 이용해 만든 사이트 입니다. 글자만 보고 판단하는
+                사이트이므로 주의하시길 바랍니다.
+            </div>
+        </form>
+    </div>
+    <div class="copyright">
+        <div class="copyImgBox">
+            <img src="/src/dmu_logo.png" class="copyImg">
+            <img src="/src/ChatGPT_logo.png" class="copyImg">
+        </div>
+        <div class="copyTxt">copyright@dongyang 20211049 ajin</div>
+    </div>
 </body>
 
+
+
+
 </html>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-image: url('src/bgImg.jpg');
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .inputSection {
+        margin-top: 50px;
+        position: relative;
+        width: 700px;
+        height: 90vh;
+        border-radius: 20px;
+        background-color: rgba(255, 255, 255, 0.35);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+    }
+
+
+    .inputSection form {
+        z-index: 2000;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .title {
+        font-size: 35pt;
+        font-weight: bold;
+        color: #664034;
+        margin: 40px 0;
+    }
+
+    .text {
+        padding: 60px;
+        font-size: 12pt;
+    }
+
+    .inputbox input {
+        width: 400px;
+        height: 50px;
+        border: 2px solid #664034;
+        border-radius: 10px;
+        padding: 10px;
+        font-size: 15pt;
+    }
+
+    .inputBtn input {
+        margin: 20px 0;
+        width: 100px;
+        height: 40px;
+        color: #fff;
+        background-color: #664034;
+        border: 2px solid #664034;
+        border-radius: 10px;
+    }
+
+    .copyright {
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .copyImg {
+        width: 40px;
+        height: 40px;
+        margin: 0 10px;
+    }
+
+    .copyTxt {
+        font-size: 13pt;
+        margin: 10px;
+        color: #fff;
+    }
+</style>
